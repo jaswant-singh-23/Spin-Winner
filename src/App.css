@@ -27,7 +27,16 @@
 .App-link {
   color: #61dafb;
 }
-
+.sc-gsTCUz.bhdLno{
+  margin: 0 auto;
+  margin-top: 60px;
+}
+button.prize-message {
+  width: 200px;
+  padding: 10px;
+  background: cornflowerblue;
+  border-radius: 30px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

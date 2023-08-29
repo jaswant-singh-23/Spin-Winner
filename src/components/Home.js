@@ -6,21 +6,54 @@ const Home = () => {
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const data = [
-    { option: "0", style: { backgroundColor: "green", textColor: "black" } },
-    { option: "1", style: { backgroundColor: "white" } },
-    { option: "2" },
+    {
+      option: "Navneet",
+      style: { backgroundColor: "green", textColor: "black" },
+    },
+    {
+      option: "Jaspreet",
+      style: { backgroundColor: "red", textColor: "black" },
+    },
+    {
+      option: "Jaswant",
+      style: { backgroundColor: "pink" },
+      textColor: "black",
+    },
+    {
+      option: "Arun",
+      style: { backgroundColor: "skyblue" },
+      textColor: "black",
+    },
+    {
+      option: "Anuj",
+      style: { backgroundColor: "gray" },
+      textColor: "black",
+    },
+    {
+      option: "Kamal",
+      style: { backgroundColor: "purple" },
+      textColor: "black",
+    },
+    {
+      option: "Kartik",
+      style: { backgroundColor: "blue" },
+      textColor: "black",
+    },
   ];
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
+    console.log(newPrizeNumber);
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
   };
   return (
     <div>
-      <h3>Selected Value: -{data[prizeNumber].completeOption}</h3>
+      <h1>Spin Winner</h1>
+      {!mustSpin && mustSpin !== undefined && (
+        <h3>Selected Value: - {data[prizeNumber].option}</h3>
+      )}
       <Wheel
         mustStartSpinning={mustSpin}
-        // prizeNumber={3}
         outerBorderColor={["#ccc"]}
         outerBorderWidth={[9]}
         innerBorderColor={["#f2f2f2"]}
